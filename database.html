@@ -1,0 +1,103 @@
+ <?php
+$connect mysql_connect("localhost","root","","testing");
+$message='';
+
+if(isset($_POST["upload"]))
+{
+	if($_FILES['product_file']['name'])
+	{
+
+		$filename=explode(("."), $_FILES['product_file']['name']);
+		if(end($filename)=="csv")
+		{
+			$handle=fopen($_FILES['product_file']['tmp_name'], "r");
+			while ($data=fgetscsv($handle)) {
+				# code...
+				$patientId=mysql_real_escape_string($connect,$data[0]);
+				$reportedOn=mysql_real_escape_string($connect,$data[1]);
+				$onsetEstimate=mysql_real_escape_string($connect,$data[2]);
+				$ageEstimate=mysql_real_escape_string($connect,$data[3]);
+				$gender=mysql_real_escape_string($connect,$data[4]);
+				$city=mysql_real_escape_string($connect,$data[5]);
+				$district=mysql_real_escape_string($connect,$data[6]);
+				$state=mysql_real_escape_string($connect,$data[7]);
+				$status=mysql_real_escape_string($connect,$data[8]);
+				$notes=mysql_real_escape_string($connect,$data[9]);
+				$contractedFrom=mysql_real_escape_string($connect,$data[10]);
+				$query="
+				UPDATE covid19india
+				SET 
+				reportedOn='$reportedOn',
+				onsetEstimate='$onsetEstimate',
+				ageEstimate='$ageEstimate',
+				gender='$gender',
+				city='$city',
+				district='$district',
+				state='$state',
+				status='$status',
+				notes='$notes',
+				contractedFrom='$contractedFrom'
+
+				WHERE patientId='$patientId'
+				";
+
+				mysqli_query($connect,$query);
+			}
+			fclose($handle)
+			header("location: index.php?updation=1");
+		}
+	}
+	
+}
+
+$query="SELECT * FROM covid19india";
+$result=mysql_query($connect,$query);
+
+ ?>
+
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title></title>
+ </head>
+ <body>
+ 	<form method="post" enctype='multipart/form-data'>
+ 	<p>Please select file<input type="file" name="product_file"/></p>
+ 	<input type="submit" name="upload"  value="upload"></input>
+ 	</form>
+ <table border="4px+">
+ 	<tr>
+ 		<th>patientId</th>
+ 		<th>reportedOn</th>
+ 		<th>onsetEstimate</th>
+ 		<th>ageEstimate</th>
+ 		<th>gender</th>
+ 		<th>city</th>
+ 		<th>district</th>
+ 		<th>state</th>
+ 		<th>status</th>
+ 		<th>notes</th>
+ 		<th>contractedFrom</th>
+ 	</tr>
+ 	<?php
+ 	while ($row=mysql_fetch_array($result)) {
+ 		# code...
+ 		echo '
+ 		<tr>
+ 			<td>'.$row["patientId"].'</td>
+ 			<td>'.$row["reportedOn"].'</td>
+ 			<td>'.$row["onsetEstimate"].'</td>
+ 			<td>'.$row["ageEstimate"].'</td>
+ 			<td>'.$row["gender"].'</td>
+ 			<td>'.$row["city"].'</td>
+ 			<td>'.$row["district"].'</td>
+ 			<td>'.$row["state"].'</td>
+ 			<td>'.$row["status"].'</td>
+ 			<td>'.$row["notes"].'</td>
+ 			<td>'.$row["contractedFrom"].'</td>
+ 		</tr>'
+ 		
+ 	}
+ </table>
+ </body>
+ </html>

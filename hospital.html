@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+#myInput {
+  background-image: url('.\\searchimg.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 50%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+
+#myTable {
+  border-collapse: collapse;
+  width: 50%;
+  border: 1px solid;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body align="center" style="text-decoration-color: red" bgcolor="CCFFFF">
+
+<table id="myTable" align="center" bgcolor="FFCCCC">
+  <thead><h1>Hospitals & Beds</h1></thead>
+<th bgcolor="#b2beb5">State Name</th>
+<th bgcolor="#b2beb5">Rural Hospitals</th>
+<th bgcolor="#b2beb5">Rural Beds</th>
+<th bgcolor="#b2beb5">Urban Hospitals</th>
+<th bgcolor="#b2beb5">Urban Beds</th>
+<th bgcolor="#b2beb5">Total Hospitals</th>
+<th bgcolor="#b2beb5">Total Beds(State Wise)</th>
+<tr>
+<td>Andhra Pradesh</td>
+<td>193</td>
+<td>6480</td>
+<td>65</td>
+<td>16658</td>
+<td>258</td>
+<td>23138</td>
+</tr>
+<tr>
+<td>Arunachal Pradesh</td>
+<td>208</td>
+<td>2136</td>
+<td>10</td>
+<td>268</td>
+<td>218</td>
+<td>2404</td>
+</tr>
+<tr>
+<td>Assam</td>
+<td>1176</td>
+<td>10944</td>
+<td>50</td>
+<td>6198</td>
+<td>1226</td>
+<td>17142</td>
+</tr>
+<tr>
+<td>Bihar</td>
+<td>930</td>
+<td>6083</td>
+<td>103</td>
+<td>5936</td>
+<td>1033</td>
+<td>12019</td>
+</tr>
+<tr>
+<td>Chhattisgarh</td>
+<td>169</td>
+<td>5070</td>
+<td>45</td>
+<td>4342</td>
+<td>214</td>
+<td>9412</td>
+</tr>
+<tr>
+<td>Goa</td>
+<td>17</td>
+<td>1405</td>
+<td>25</td>
+<td>1608</td>
+<td>42</td>
+<td>3013</td>
+</tr>
+<tr>
+<td>Gujarat</td>
+<td>364</td>
+<td>11715</td>
+<td>122</td>
+<td>20565</td>
+<td>486</td>
+<td>32280</td>
+</tr>
+<tr>
+<td>Haryana</td>
+<td>609</td>
+<td>6690</td>
+<td>59</td>
+<td>4550</td>
+<td>668</td>
+<td>11240</td>
+</tr>
+<tr>
+<td>Himachal Pradesh</td>
+<td>705</td>
+<td>5665</td>
+<td>96</td>
+<td>6734</td>
+<td>801</td>
+<td>12399</td>
+</tr>
+<tr>
+<td>Jammu & Kashmir</td>
+<td>56</td>
+<td>7234</td>
+<td>76</td>
+<td>4417</td>
+<td>132</td>
+<td>11651</td>
+</tr>
+<tr>
+<td>Jharkhand</td>
+<td>519</td>
+<td>5842</td>
+<td>36</td>
+<td>4942</td>
+<td>555</td>
+<td>10784</td>
+</tr>
+<tr>
+<td>Karnataka</td>
+<td>2471</td>
+<td>21072</td>
+<td>374</td>
+<td>49093</td>
+<td>2845</td>
+<td>70165</td>
+</tr>
+<tr>
+<td>Kerala</td>
+<td>981</td>
+<td>16865</td>
+<td>299</td>
+<td>21139</td>
+<td>1280</td>
+<td>38004</td>
+</tr>
+<tr>
+<td>Madhya Pradesh</td>
+<td>334</td>
+<td>10020</td>
+<td>117</td>
+<td>18819</td>
+<td>451</td>
+<td>28839</td>
+</tr>
+<tr>
+<td>Maharashtra</td>
+<td>273</td>
+<td>12398</td>
+<td>438</td>
+<td>39048</td>
+<td>711</td>
+<td>51446</td>
+</tr>
+<tr>
+<td>Manipur</td>
+<td>23</td>
+<td>730</td>
+<td>7</td>
+<td>697</td>
+<td>30</td>
+<td>1427</td>
+</tr>
+<tr>
+<td>Meghalaya</td>
+<td>143</td>
+<td>1970</td>
+<td>14</td>
+<td>2487</td>
+<td>157</td>
+<td>4457</td>
+</tr>
+<tr>
+<td>Mizoram</td>
+<td>56</td>
+<td>604</td>
+<td>34</td>
+<td>1393</td>
+<td>90</td>
+<td>1997</td>
+</tr>
+<tr>
+<td>Nagaland</td>
+<td>21</td>
+<td>630</td>
+<td>15</td>
+<td>1250</td>
+<td>36</td>
+<td>1880</td>
+</tr>
+<tr>
+<td>Odisha</td>
+<td>1655</td>
+<td>6339</td>
+<td>149</td>
+<td>12180</td>
+<td>1804</td>
+<td>18519</td>
+</tr>
+<tr>
+<td>Punjab</td>
+<td>510</td>
+<td>5805</td>
+<td>172</td>
+<td>12128</td>
+<td>682</td>
+<td>17933</td>
+</tr>
+<tr>
+<td>Rajasthan</td>
+<td>602</td>
+<td>21088</td>
+<td>150</td>
+<td>10760</td>
+<td>752</td>
+<td>31848</td>
+</tr>
+<tr>
+<td>Sikkim</td>
+<td>24</td>
+<td>260</td>
+<td>9</td>
+<td>1300</td>
+<td>33</td>
+<td>1560</td>
+</tr>
+<tr>
+<td>Tamil Nadu</td>
+<td>692</td>
+<td>40179</td>
+<td>525</td>
+<td>37353</td>
+<td>1217</td>
+<td>77532</td>
+</tr>
+<tr>
+<td>Telangana</td>
+<td>802</td>
+<td>7668</td>
+<td>61</td>
+<td>13315</td>
+<td>863</td>
+<td>20983</td>
+</tr>
+<tr>
+<td>Tripura</td>
+<td>99</td>
+<td>1140</td>
+<td>56</td>
+<td>3277</td>
+<td>155</td>
+<td>4417</td>
+</tr>
+<tr>
+<td>Uttar Pradesh</td>
+<td>4442</td>
+<td>39104</td>
+<td>193</td>
+<td>37156</td>
+<td>4635</td>
+<td>76260</td>
+</tr>
+<tr>
+<td>Uttarakhand</td>
+<td>410</td>
+<td>3284</td>
+<td>50</td>
+<td>5228</td>
+<td>460</td>
+<td>8512</td>
+</tr>
+<tr>
+<td>Uttarakhand</td>
+<td>410</td>
+<td>3284</td>
+<td>50</td>
+<td>5228</td>
+<td>460</td>
+<td>8512</td>
+</tr>
+<tr>
+<td>West Bengal</td>
+<td>1272</td>
+<td>19684</td>
+<td>294</td>
+<td>58882</td>
+<td>1566</td>
+<td>78566</td>
+</tr>
+<tr>
+<td>West Bengal</td>
+<td>1272</td>
+<td>19684</td>
+<td>294</td>
+<td>58882</td>
+<td>1566</td>
+<td>78566</td>
+</tr>
+<tr>
+<td>Andaman & Nicobar Islands</td>
+<td>27</td>
+<td>575</td>
+<td>3</td>
+<td>500</td>
+<td>30</td>
+<td>1075</td>
+</tr>
+<tr>
+<td>Chandigarh</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+<td>778</td>
+<td>4</td>
+<td>778</td>
+</tr>
+<tr>
+<td>Dadra & Nagar Haveli</td>
+<td>10</td>
+<td>273</td>
+<td>1</td>
+<td>316</td>
+<td>11</td>
+<td>589</td>
+</tr>
+<tr>
+<td>Daman & Diu</td>
+<td>5</td>
+<td>240</td>
+<td>0</td>
+<td>0</td>
+<td>5</td>
+<td>240</td>
+</tr>
+<tr>
+<td>Delhi</td>
+<td>0</td>
+<td>0</td>
+<td>109</td>
+<td>24383</td>
+<td>109</td>
+<td>24383</td>
+</tr>
+<tr>
+<td>Lakshadweep</td>
+<td>9</td>
+<td>300</td>
+<td>0</td>
+<td>0</td>
+<td>9</td>
+<td>300</td>
+</tr>
+<tr>
+<td>Puducherry</td>
+<td>3</td>
+<td>96</td>
+<td>11</td>
+<td>3473</td>
+<td>14</td>
+<td>3569</td>
+</tr>
+<tr>
+<td>INDIA</td>
+<td>19810</td>
+<td>279588</td>
+<td>3772</td>
+<td>431173</td>
+<td>23582</td>
+<td>710761</td>
+</tr>
+<tr>
+<td>Total Summary(INDIA)</td>
+<td>39620</td>
+<td>559176</td>
+<td>7544</td>
+<td>862346</td>
+<td>47164</td>
+<td>1421522</td>
+</tr>
+</table>
+<br></br>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for state.." title="Type in a name" >
+<input type="text" id="myInput" onkeyup="myFunction1()" placeholder="Search for Type.." title="Type in a name" >
+<table id="myTable" align="center" bgcolor="FFCCCC">
+  <thead><h1>Medical College and Beds</h1></thead>
+  <tr class="header">
+    <td bgcolor="#b2beb5">State Name</td>
+    <td bgcolor="#b2beb5">Institute Name</td>
+
+    <td bgcolor="#b2beb5">City</td>
+
+    <td bgcolor="#b2beb5">Type</td>
+
+    <td bgcolor="#b2beb5">Admission Capacity</td>
+
+    <td bgcolor="#b2beb5">Hospital Beds</td>
+  </th>
+
+<tr>
+<td>A & N Islands</td>
+<td>Andaman & Nicobar Islands Insitute of Medical Sciences, Port Blair</td>
+<td>Port Blair</td>
+<td>Govt.</td>
+<td>100</td>
+<td>460</td>
+
+</tr>
+<tr>
+<td>Andhra Pradesh</td>
+<td>ACSR Government Medical College Nellore</td>
+<td>Nellore</td>
+<td>Govt</td>
+<td>150</td>
+<td>750</td>
+</tr>
+<tr>
+
+<td>Andhra Pradesh</td>
+<td> Alluri Sitaram Raju Academy of Medical Sciences, Eluru</td>
+<td> Eluru</td>
+<td>Trust</td>
+<td>150</td>
+<td>1070</td>
+
+</tr>
+<tr>
+<td>Andhra Pradesh</td>
+<td>Andhra Medical College, Visakhapatnam</td>
+
+<td>Visakhapatnam</td>
+
+<td>Govt.</td>
+
+<td>200</td>
+
+<td>2017</td>
+
+</tr>
+<tr>
+<td>Andhra Pradesh</td>
+<td>Apollo Institute of Medical Sciences and Research, Chittoor</td>
+<td>Chittoor</td>
+<td>Society</td>
+<td>150</td>
+<td>0</td>
+
+</tr>
+<tr>
+<td>Andhra Pradesh</td>
+<td>Dr. P.S.I. Medical College , Chinoutpalli</td>
+<td>Chinoutpalli</td>
+<td>Trust</td>
+<td>150</td>
+<td>398</td>
+
+</tr>
+<tr>
+<td>Assam</td>
+<td>Assam Medical College, Dibrugarh</td>
+<td>Dibrugarh</td>
+<td>Govt</td>
+<td>170</td>
+<td>1365</td>
+
+</tr>
+<tr>
+<td>Assam</td>
+<td>Fakhruddin Ali Ahmed Medical College, Barpeta, Assam</td>
+<td>Barpeta</td>
+<td>Govt-Society</td>
+<td>100</td>
+<td>500</td>
+
+</tr>
+<tr>
+<td>Assam</td>
+<td>Gauhati Medical College, Guwahati</td>
+<td>Guwahati</td>
+<td>Govt</td>
+<td>156</td>
+<td>1982</td>
+
+</tr>
+<tr>
+<td>Assam</td>
+<td>Jorhat Medical College & Hospital , Jorhat</td>
+<td>Jorhat</td>
+<td>Govt</td>
+<td>100</td>
+<td>400</td>
+
+</tr>
+<tr>
+<td>Assam</td>
+<td>Silchar Medical College, Silchar</td>
+<td>Silchar</td>
+<td>Govt</td>
+<td>100</td>
+<td>906</td>
+
+</tr>
+<tr>
+<td>Tripura</td>
+<td>Agartala Government Medical College,Agartala</td>
+<td>Agartala</td>
+<td>Govt</td>
+<td>100</td>
+<td>695</td>
+
+</tr>
+<tr>
+<td>Punjab</td>
+<td>Adesh Institute of Medical Sciences & Research, Bhatinda</td>
+<td>Bhatinda</td>
+<td>Trust</td>
+<td>150</td>
+<td>700</td>
+
+</tr>
+<tr>
+<td>Punjab</td>
+<td>Christian Medical College, Ludhiana</td>
+<td>Ludhiana</td>
+<td>Trust</td>
+<td>75</td>
+<td>650</td>
+
+</tr>
+<tr>
+<td>Punjab</td>
+<td>Dayanand Medical College & Hospital, Ludhiana</td>
+<td>Ludhiana</td>
+<td>Trust</td>
+<td>100</td>
+<td>1048</td>
+
+</tr>
+<tr>
+<td>Rajasthan</td>
+<td>All India Institute of Medical Sciences, Jodhpur</td>
+<td>Jodhpur</td>
+<td>Govt</td>
+<td>100</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Rajasthan</td>
+<td>SMS Medical College, Jaipur</td>
+<td>Jaipur</td>
+<td>Govt</td>
+<td>250</td>
+<td>4734</td>
+</tr>
+<tr>
+<td>Rajasthan</td>
+<td>Sardar Patel Medical College, Bikaner</td>
+<td>Bikaner</td>
+<td>Govt</td>
+<td>250</td>
+<td>2088</td>
+</tr>
+<tr>
+<td>Sikkim</td>
+<td>Sikkim Manipal Institute of Medical Sciences, Gangtok</td>
+<td>Gangtok</td>
+<td>Trust</td>
+<td>50</td>
+<td>650</td>
+</tr>
+<tr>
+<td>Goa</td>
+<td>Goa Medical College, Panaji</td>
+<td>Panaji</td>
+<td>Govt</td>
+<td>150</td>
+<td>1152</td>
+</tr>
+
+<tr>
+<td>Chandigarh</td>
+<td>Government Medical College, Chandigarh</td>
+<td>Chandigarh</td>
+<td>Govt</td>
+<td>100</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Chhattisgarh</td>
+<td>All India Institute of Medical Sciences Raipur</td>
+<td>Raipur</td>
+<td>Govt</td>
+<td>100</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>Chhattisgarh</td>
+<td>Shri Shankaracharya Institute of Medical Sciences, Bhilai</td>
+<td>Bhilai</td>
+<td>Society</td>
+<td>150</td>
+<td>350</td>
+</tr>
+
+<tr>
+<td>Haryana</td>
+<td>Adesh Medical College and Hospital, Sahabad, Kurushetra</td>
+<td>Sahabad</td>
+<td>Society</td>
+<td>150</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>Haryana</td>
+<td>World College of Medical Sciences & Research, Jhajjar</td>
+<td>Jhajjar</td>
+<td>Trust</td>
+<td>0</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>Haryana</td>
+<td>Kalpana Chawala Govt. Medical College, Karnal</td>
+<td>Karnal</td>
+<td>Govt</td>
+<td>100</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>Haryana</td>
+<td>Maharaja Agrasen Medical College, Agroha</td>
+<td>Agroha</td>
+<td>Trust</td>
+<td>100</td>
+<td>450</td>
+</tr>
+
+<tr>
+<td>Himachal Pradesh</td>
+<td>Dr. Rajendar Prasad Government Medical College, Tanda, H.P</td>
+<td>Tanda</td>
+<td>Govt</td>
+<td>100</td>
+<td>593</td>
+</tr>
+
+<td>Himachal Pradesh</td>
+<td>Pt.Jawahar Lal Nehru Govt. Medicalcollege, Chamba</td>
+<td>Chamba</td>
+<td>Govt</td>
+<td>100</td>
+<td>0</td>
+</tr>
+
+<td>Himachal Pradesh</td>
+<td>Shri Lal Bahadur Shastri Govt. Medical College, Mandi</td>
+<td>Mandi</td>
+<td>Govt</td>
+<td>100</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Jammu & Kashmir</td>
+<td>Acharya Shri Chander College of Medical Sciences, Jammu</td>
+<td>Jammu</td>
+<td>Trust</td>
+<td>100</td>
+<td>500</td>
+
+</tr>
+<tr>
+<td>Jammu & Kashmir</td>
+<td>Government Medical College, Jammu</td>
+<td>Jammu</td>
+<td>Govt</td>
+<td>150</td>
+<td>2295</td>
+
+</tr>
+
+<tr>
+<td>Jammu & Kashmir</td>
+<td>Government Medical College, Srinagar</td>
+<td>Srinagar</td>
+<td>Govt</td>
+<td>150</td>
+<td>2250</td>
+
+</tr>
+
+<tr>
+<td>Jammu & Kashmir</td>
+<td>Sher-I-Kashmir Instt. Of Medical Sciences, Srinagar</td>
+<td>Srinagar</td>
+<td>Govt</td>
+<td>100</td>
+<td>250</td>
+
+</tr>
+
+<tr>
+<td>Jharkhand</td>
+<td>M G M Medical College, Jamshedpur</td>
+<td>Jamshedpur</td>
+<td>Govt</td>
+<td>100</td>
+<td>514</td>
+
+</tr>
+
+<tr>
+<td>Jharkhand</td>
+<td>Patliputra Medical College, Dhanbad</td>
+<td>Dhanbad</td>
+<td>Govt</td>
+<td>50</td>
+<td>500</td>
+</tr>
+
+<tr>
+<td>Jharkhand</td>
+<td>Rajendra Institute of Medical Sciences, Ranchi</td>
+<td>Ranchi</td>
+<td>Govt</td>
+<td>150</td>
+<td>1500</td>
+
+</tr>
+
+<tr>
+<td>Karnataka</td>
+<td>A J Institute of Medical Sciences & Research Centre, Mangalore</td>
+<td>Mangalore</td>
+<td>Trust</td>
+<td>150</td>
+<td>900</td>
+
+</tr>
+<tr>
+<td>Karnataka</td>
+<td>Adichunchanagiri Institute of Medical Sciences Bellur</td>
+<td>Bellur</td>
+<td>Trust</td>
+<td>150</td>
+<td>750</td>
+</tr>
+<tr>
+<td>Karnataka</td>
+<td>Vijaynagar Institute of Medical Sciences, Bellary</td>
+<td>Bellary</td>
+<td>Govt</td>
+<td>150</td>
+<td>1017</td>
+</tr>
+<tr>
+<td>Karnataka</td>
+<td>Vydehi Institute Of Medical Sciences & Research Centre, Bangalore</td>
+<td>Bangalore</td>
+<td>Trust</td>
+<td>250</td>
+<td>1100</td>
+
+</tr>
+
+<tr>
+<td>Karnataka</td>
+<td>Yenepoya Medical College, Mangalore</td>
+<td>Mangalore</td>
+<td>Trust</td>
+<td>150</td>
+<td>929</td>
+</tr>
+
+<tr>
+<td>Maharastra</td>
+<td>ACPM Medical College, Dhule</td>
+<td>Dhule</td>
+<td>Trust</td>
+<td>0</td>
+<td>0</td>
+
+</tr>
+
+<tr>
+<td>Maharastra</td>
+<td>Ashwini Rural Medical College, Hospital & Research Centre, Solapur</td>
+<td>Solapur</td>
+<td>Trust</td>
+<td>100</td>
+<td>0</td>
+
+</tr>
+
+<tr>
+<td>Maharastra</td>
+<td>B.K.L Walawalkar Rural Medical College, Ratnagiri</td>
+<td>Ratnagiri</td>
+<td>Trust</td>
+<td>100</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>Maharastra</td>
+
+<td>Bharati Vidyapeeth Deemed University Medical College & Hospital, Sangli</td>
+<td>Sangli</td>
+<td>Trust</td>
+<td>150</td>
+<td>0</td>
+
+</tr>
+<tr>
+<td>Maharastra</td>
+
+<td>Bharati Vidyapeeth University Medical College, Pune</td>
+<td>Pune</td>
+<td>Trust</td>
+<td>150</td>
+<td>0</td>
+
+</tr>
+<tr>
+<td>Manipur</td>
+<td>Jawaharlal Nehru Institute of Medical Sciences,Porompet,Imphal</td>
+<td>Imphal</td>
+<td>Govt</td>
+<td>100</td>
+<td>0</td>
+
+</tr>
+<tr>
+<td>Manipur</td>
+<td>Regional Institute of Medical Sciences, Imphal</td>
+<td>Imphal</td>
+<td>Govt</td>
+<td>100</td>
+<td>0</td>
+
+</tr>
+
+
+<tr>
+<td>Meghalaya</td>
+<td>North Eastern Indira Gandhi Regional Instt. of Health and Medical Sciences, Shillong</td>
+<td>Shillong</td>
+<td>Govt</td>
+<td>50</td>
+<td>0</td>
+
+</tr>
+<tr>
+<td>Odisha</td>
+<td>All India Institute of Medical Sciences, Bhubaneswar</td>
+<td>Bhubaneswar</td>
+<td>Govt</td>
+<td>100</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Odisha</td>
+<td>Hi-Tech Medical College & Hospital, Bhubaneswar</td>
+<td>Bhubaneswar</td>
+<td>Trust</td>
+<td>100</td>
+<td>550</td>
+</tr>
+<tr>
+<td>Odisha</td>
+<td>Instt. Of Medical Sciences & SUM Hospital,Bhubaneswar</td>
+<td>Bhubaneswar</td>
+<td>Trust</td>
+<td>150</td>
+<td>830</td>
+</tr>
+<tr>
+<td>Odisha</td>
+<td>Kalinga Institute of Medical Sciences, Bhubaneswar</td>
+<td>Bhubaneswar</td>
+<td>Trust</td>
+<td>150</td>
+<td>1000</td>
+</tr>
+<tr>
+<td>Odisha</td>
+<td>SCB Medical College, Cuttack</td>
+<td>Cuttack</td>
+<td>Govt</td>
+<td>250</td>
+<td>2066</td>
+</tr>
+<tr>
+<td>Puducherry</td>
+<td>Aarupadai Veedu Medical College, Pondicherry</td>
+<td>Pondicherry</td>
+<td>Trust</td>
+<td>100</td>
+<td>540</td>
+</tr>
+<tr>
+<td>Puducherry</td>
+<td>Indira Gandhi Medical College & Research Institute, Puducherry</td>
+<td>Puducherry</td>
+<td>Govt</td>
+<td>150</td>
+<td>700</td>
+</tr>
+<tr>
+<td>Puducherry</td>
+<td>Sri Manakula Vinayagar Medical College & Hospital, Pondicherry</td>
+<td>Puducherry</td>
+<td>Trust</td>
+<td>150</td>
+<td>830</td>
+</tr>
+<tr>
+<td>Puducherry</td>
+<td>Vinayaka Missions Medical College, Pondicherry</td>
+<td>Puducherry</td>
+<td>Trust</td>
+<td>100</td>
+<td>730</td>
+</tr>
+<tr>
+<td>Tamil Nadu</td>
+<td>ACS Medical College and Hospital, Chennai</td>
+<td>Chennai</td>
+<td>Trust</td>
+<td>150</td>
+<td>700</td>
+</tr>
+<tr>
+<td>Tamil Nadu</td>
+<td>Annaii Medical College & Hospital, Pennalur, , Kanchipuram,</td>
+<td>Kanchipuram,</td>
+<td>Trust</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Tamil Nadu</td>
+<td>Annapoorna Medical College & Hospital, Salem</td>
+<td>Salem</td>
+<td>Trust</td>
+<td>150</td>
+<td>703</td>
+</tr>
+<tr>
+<td>Tamil Nadu</td>
+<td>Chengalpattu Medical College, Chengalpattu</td>
+<td>Chengalpattu</td>
+<td>Govt</td>
+<td>100</td>
+<td>630</td>
+</tr>
+<tr>
+<td>Tamil Nadu</td>
+<td>Chennai Medical College Hospital and research centre,Irungalur,Trichy</td>
+<td>Trichy</td>
+<td>Trust</td>
+<td>150</td>
+<td>750</td>
+</tr>
+<tr>
+<td>Telangana</td>
+<td>Apollo Institute of Medical Sciences and Research, Hyderabad</td>
+<td>Hyderabad</td>
+<td>Trust</td>
+<td>100</td>
+<td>300</td>
+</tr>
+<tr>
+<td>Telangana</td>
+<td>Bhaskar Medical College, Yenkapally</td>
+<td>Yenkapally</td>
+<td>Trust</td>
+<td>150</td>
+<td>790</td>
+</tr>
+<tr>
+<td>Telangana</td>
+<td>Chalmeda Anand Rao Insttitute Of Medical Sciences, Karimnagar</td>
+<td> Karimnagar</td>
+<td>Trust</td>
+<td>150</td>
+<td>840</td>
+</tr>
+<tr>
+<td>Telangana</td>
+<td>Deccan College of Medical Sciences, Hyderabad</td>
+<td> Hyderabad</td>
+<td>Trust</td>
+<td>150</td>
+<td>515</td>
+</tr>
+<tr>
+<td>Telangana</td>
+<td>Dr. VRK Womens Medical College, Aziznagar</td>
+<td> Aziznagar</td>
+<td>Trust</td>
+<td>100</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Telangana</td>
+<td>S V S Medical College, Mehboobnagarr</td>
+<td> Mehboobnagarr</td>
+<td>Trust</td>
+<td>100</td>
+<td>750</td>
+</tr>
+<tr>
+<td>Telangana</td>
+<td>Shadan Institute of Medical Sciences,Research Centre and Teaching Hospital, Peerancheru</td>
+<td> Peerancheru</td>
+<td>Society</td>
+<td>150</td>
+<td>750</td>
+</tr>
+<tr>
+<td>Delhi</td>
+<td>All India Institute of Medical Sciences, New Delhi</td>
+<td> New Delhi</td>
+<td>Govt</td>
+<td>50</td>
+<td>2362</td>
+
+</tr>
+<tr>
+<td>Delhi</td>
+<td>Army College of Medical Sciences, New Delhi</td>
+<td> New Delhi</td>
+<td>Trust</td>
+<td>100</td>
+<td>999</td>
+
+</tr>
+<tr>
+<td>Delhi</td>
+<td>Hamdard Institute of Medical Sciences & Research, New Delhi</td>
+<td> New Delhi</td>
+<td>Society</td>
+<td>0</td>
+<td>350</td>
+
+</tr>
+<tr>
+<td>Delhi</td>
+<td>Lady Hardinge Medical College, New Delhi</td>
+<td> New Delhi</td>
+<td>Govt</td>
+<td>200</td>
+<td>877</td>
+
+</tr>
+<tr>
+<td>Delhi</td>
+<td>Maulana Azad Medical College, New Delhi</td>
+<td> New Delhi</td>
+<td>Govt</td>
+<td>250</td>
+<td>1500</td>
+
+
+
+</tr>
+<tr>
+<td>Gujarat</td>
+<td>Gujarat Adani Institute of Medical Sciences, Bhuj</td>
+<td>Bhuj</td>
+<td>Trust</td>
+<td>150</td>
+<td>645</td>
+
+</tr>
+<tr>
+<td>Gujarat</td>
+<td>Medical College, Baroda</td>
+<td>Baroda</td>
+<td>Govt</td>
+<td>180</td>
+<td>1513</td>
+
+</tr>
+<tr>
+<td>Gujarat</td>
+<td>MP Shah Medical College,Jamnagar</td>
+<td>Jamnagar</td>
+<td>Govt</td>
+<td>200</td>
+<td>1263</td>
+
+</tr>
+<tr>
+<td>Gujarat</td>
+<td>Pandit Deendayal Upadhyay Medical College, Rajkot</td>
+<td>Rajkot</td>
+<td>Govt</td>
+<td>150</td>
+<td>850</td>
+</tr>
+<tr>
+<td>Gujarat</td>
+<td>Parul Institute of Medical Sciences & Research, Vadodara</td>
+<td>Vadodara</td>
+<td>Private</td>
+<td>150</td>
+<td>550</td>
+
+</tr>
+<tr>
+<td>Kerala</td>
+<td>Sri Gokulam Medical College Trust & Research Foundation, Trivandrum</td>
+<td>Trivandrum</td>
+<td>Trust</td>
+<td>150</td>
+<td>600</td>
+
+</tr>
+<tr>
+<td>Kerala</td>
+<td>T D Medical College, Alleppey (Allappuzha)</td>
+<td>Alleppey</td>
+<td>Govt</td>
+<td>150</td>
+<td>1051</td>
+
+</tr>
+<tr>
+<td>Kerala</td>
+<td>Medical College, Thiruvananthapuram</td>
+<td>Thiruvananthapuram</td>
+<td>Govt</td>
+<td>200</td>
+<td>0</td>
+
+</tr>
+<tr>
+<td>Kerala</td>
+<td>Govt Medical College, Yakkara, Palakkad</td>
+<td>Palakkad</td>
+<td>Govt</td>
+<td>1000</td>
+<td>750</td>
+
+</tr>
+<tr>
+<td>Kerala</td>
+<td>Government Medical College, Thrissur</td>
+<td>Thrissur</td>
+<td>Govt</td>
+<td>150</td>
+<td>2350</td>
+
+</tr>
+<tr>
+<td>Madhya Pradesh</td>
+<td>Advance Institute of Medical Sciences and Research Centre, Bhopal</td>
+<td>Bhopal</td>
+<td>Society</td>
+<td>0</td>
+<td>0</td>
+
+</tr>
+<tr>
+<td>Madhya Pradesh</td>
+<td>Amaltas Institute of Medical Sciences, Dewas</td>
+<td>Dewas</td>
+<td>Society</td>
+<td>150</td>
+<td>300</td>
+
+</tr>
+<tr>
+<td>Madhya Pradesh</td>
+<td>Amaltas Institute of Medical Sciences, Dewas</td>
+<td>Dewas</td>
+<td>Society</td>
+<td>150</td>
+<td>300</td>
+
+</tr>
+<tr>
+<td>Madhya Pradesh</td>
+<td>Netaji Subhash Chandra Bose Medical College, Jabalpur</td>
+<td>Jabalpur</td>
+<td>Govt</td>
+<td>150</td>
+<td>819</td>
+
+</tr>
+<tr>
+<td>Madhya Pradesh</td>
+<td>Peoples College of Medical Sciences & Research Centre, Bhanpur, Bhopal</td>
+<td>Bhopal</td>
+<td>Trust</td>
+<td>150</td>
+<td>650</td>
+
+</tr>
+<tr>
+<td>Uttarakhand</td>
+<td>All India Institute of Medical Sciences, Rishikesh</td>
+<td>Rishikesh</td>
+<td>Govt</td>
+<td>100</td>
+<td>0</td>
+
+</tr>
+<tr>
+<td>Uttarakhand</td>
+<td>Doon Medical College, Dehradun Dehradun</td>
+<td>Dehradun</td>
+<td>Govt</td>
+<td>150</td>
+<td>300</td>
+</tr>
+<tr>
+<td>Uttarakhand</td>
+<td> Veer Chandra Singh Garhwali Govt. Medical Sc. & Research Instt, Srinagar, Pauri Garhwal</td>
+<td> Srinagar</td>
+<td>Govt</td>
+<td>150</td>
+<td>300</td>
+</tr>
+
+<tr>
+<td>Uttarakhand</td>
+<td>Himalayan Institute of Medical Sciences, Dehradun</td>
+<td>Dehradun</td>
+<td>Trust</td>
+<td>150</td>
+<td>750</td>
+
+</tr>
+
+<tr>
+<td>Uttarakhand</td>
+<td>Sridev Suman Subharti Medical College, Dehradun</td>
+<td>Dehradun</td>
+<td>Trust</td>
+<td>150</td>
+<td>350</td>
+
+</tr>
+
+<tr>
+<td>Bihar</td>
+<td>All India Institute of Medical Sciences Patna, Bihar</td>
+<td>Patna</td>
+<td>Govt</td>
+<td>100</td>
+<td>0</td>
+
+</tr>
+<tr>
+<td>Bihar</td>
+<td>Anugrah Narayan Magadh Medical College, Gaya</td>
+<td>Gaya</td>
+<td>Govt</td>
+<td>100</td>
+<td>544</td>
+
+</tr>
+<tr>
+<td>Bihar</td>
+<td>Government Medical College, Bettiah</td>
+<td>Bettiah</td>
+<td>Govt</td>
+<td>100</td>
+<td>315</td>
+
+
+</tr>
+
+<tr>
+<td>Bihar</td>
+<td>Darbhanga Medical College, Lehriasarai</td>
+<td>Lehriasarai</td>
+<td>Govt</td>
+<td>100</td>
+<td>1030</td>
+
+</tr>
+<tr>
+<td>Bihar</td>
+<td>Indira Gandhi Institute of Medical Sciences,Sheikhpura Patna</td>
+<td>Patna</td>
+<td>Govt</td>
+<td>100</td>
+<td>500</td>
+</tr>
+<tr>
+<td>Uttar Pradesh</td>
+<td>Career Instt. Of Medical Sciences & Hospital, Lucknow</td>
+<td>Lucknow</td>
+<td>Trust</td>
+<td>100</td>
+<td>400</td>
+</tr>
+<tr>
+<td>Uttar Pradesh</td>
+<td>Dr. Ram Manohar Lohia Institute of Medical Sciences, Lucknow</td>
+<td>Lucknow</td>
+<td>Govt</td>
+<td>150</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Uttar Pradesh</td>
+<td>Era Lucknow Medical College , Lucknow</td>
+<td>Lucknow</td>
+<td>Trust</td>
+<td>150</td>
+<td>700</td>
+</tr>
+<tr>
+<td>Uttar Pradesh</td>
+<td>F.H. Medical College & Hospital, Firozabad</td>
+<td>Firozabad</td>
+<td>Trust</td>
+<td>150</td>
+<td>350</td>
+</tr>
+<tr>
+<td>Uttar Pradesh</td>
+<td>Glocal Medical College, Super Specility Hospital & Research Centre</td>
+<td>Saharanpur</td>
+<td>Trust</td>
+<td>0</td>
+<td>300</td>
+</tr>
+<tr>
+<td>West Bengal</td>
+<td>Burdwan Medical College, Burdwan</td>
+<td>Burdwan</td>
+<td>Govt</td>
+<td>150</td>
+<td>1105</td>
+</tr>
+<tr>
+<td>West Bengal</td>
+<td>Calcutta National Medical College, Kolkata</td>
+<td>Kolkata</td>
+<td>Govt</td>
+<td>200</td>
+<td>11470</td>
+</tr>
+<tr>
+<td>West Bengal</td>
+<td>College of Medicine and JNM Hospital,Kalyani,Nadia</td>
+<td>Nadia</td>
+<td>Govt</td>
+<td>100</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>West Bengal</td>
+<td>ICARE Institute of Med. Sciences & Research, Haldia</td>
+<td>Haldia</td>
+<td>Trust</td>
+<td>0</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>West Bengal</td>
+<td>IQ-City Medical College, Burdwan</td>
+<td>Burdwan</td>
+<td>Trust</td>
+<td>0</td>
+<td>322</td>
+</tr>
+
+<tr>
+</tr>
+</table>
+<script>
+function myFunction()
+{
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++)
+  {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td)
+    {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }      
+  }
+}
+function myFunction1()
+{
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++)
+  {
+    td = tr[i].getElementsByTagName("td")[3];
+    if (td)
+    {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }      
+  }
+}
+
+</script>
+</body>
+</html>
+

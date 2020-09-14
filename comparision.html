@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="stylesheet.css">
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Dates',  'persons'],
+          ['30/01/2020',10],
+          ['1/2/2020', 20 ],
+          ['20/2/2020', 35 ],
+          ['4/3/2020', 8]
+        ]);
+
+        var options = {
+          title: 'Decreased',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+</head>
+<body bgcolor="#EFFF88">
+
+    <div id="curve_chart" style="width: 900px; height: 500px"></div>
+
+States:
+<select name="state">
+	<option>India</option>
+	<option>Kerala</option>
+	<option>Karnataka</option>
+	<option>Telanagana</option>
+	<option>Tamil nadu</option>
+	<option>Delhi</option>
+	<option>Uttar Pradesh</option>
+	<option>Maharastra</option>
+	<option>Goa</option>
+	<option>Gujrat</option>
+	<option>Rajathan</option>
+</select>
+&nbsp&nbspAge Groups:<select name="Age">
+	<option>0-9</option>
+	<option>10-20</option>
+	<option>20-30</option>
+	<option>30-40</option>
+	<option>40-50</option>
+	<option>50-60</option>
+	<option>60-70</option>
+	<option>70-80</option>
+	<option>80-90</option>
+	<option>90-100</option>
+
+</select>
+&nbsp&nbspGender:
+<select name="Gender">
+	<option>Male</option>
+	<option>Female</option>
+	<option>Others</option>
+</select>
+<br></br>
+Date <input type="date" name="Date"></input>
+</body>
+</html>
